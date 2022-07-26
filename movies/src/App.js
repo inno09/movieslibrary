@@ -1,9 +1,17 @@
+import React, { useState } from "react";
 import './App.css';
+import NavBar from './components/NavBar';
 
 function App() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  function handleDarkModeClick() {
+    setIsDarkMode((isDarkMode) => !isDarkMode);
+  }
+  
   return (
     <div className="App">
-      <input type="text"/>
+      <NavBar isDarkMode={isDarkMode} onDarkModeClick={handleDarkModeClick}/>
     </div>
   );
 }
