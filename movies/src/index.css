@@ -24,13 +24,13 @@ select {
   background: var(--cyan);
 }
 
-.App.dark {
+.Nav.dark {
   --font-color: rgb(255, 255, 255);
   --background: rgb(50, 50, 50);
   --background--light: rgb(80, 80, 80);
   transition: all 0.3s;
 }
-.App {
+.Nav {
   margin: 2rem auto;
   padding: 1rem 2rem;
   background: var(--background);
@@ -39,4 +39,15 @@ select {
   border-radius: 10px;
 }
 
-
+.Search {
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background: var(--background);
+  color: var(--font-color);
+  box-shadow: 4px 4px 10px rgba(33, 33, 33, 0.2);
+  border-radius: 10px;
+}
+.search {
+  position: center;
+  color: blue;
+}
