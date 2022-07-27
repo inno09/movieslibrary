@@ -4,18 +4,19 @@ import Movies from "./Movies";
 
 function MoviesContainer({movies, removeMovie, addToFavorites}) {
   return (
-    <div className="card" >
-      {movies.map(movie => {
+   <div className="cardContainer" >
+     {movies.map(movie => {
         return (
           <Movies 
-            key={movie.id} 
-            movie={movie} 
-            removeMovie={removeMovie} 
-            addToFavorites={addToFavorites} 
+          key={movie.id} 
+          movie={movie} 
+          removeMovie={removeMovie} 
+          addToFavorites={addToFavorites} 
           />
         )
-        })}
-    </div>
+      })}
+   </div>
+        
   );
 }
 
@@ -28,5 +29,14 @@ export default MoviesContainer;
     <h5 class="card-title">Card title</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     <a href="#" className="btn btn-primary">Go somewhere</a>
+  </div>
+</div> */}
+
+{/* <div class="container text-center">
+  <div class="row row-cols-2">
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
   </div>
 </div> */}

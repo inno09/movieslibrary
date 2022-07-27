@@ -15,13 +15,15 @@ function Movies({movie, removeMovie, addToFavorites}) {
   }
 
   return (
-    <div>
-      <h3>{fullTitle}</h3>
-      <p>{releaseState}</p>
-      <img src={image} className="card-img-top" alt={fullTitle} />
-      <button onClick={() => setIsWatched(!isWatched)} > Mark as {isWatched ? "watched" : "unwatched" }</button>
-      <button onClick={onDeleteClick} > Delete</button>
-      <button onClick={() => addToFavorites(movie)}> {movie.isFavorite ? "Unfavorite" : "⭐Favorite" }</button>
+    <div class="card">
+      <div style={{ width: '18rem' }}>
+        <h3>{fullTitle}</h3>
+        <p>{releaseState}</p>
+        <img src={image} className="card-img-top" alt={fullTitle} />
+        <button onClick={() => setIsWatched(!isWatched)} > Mark as {isWatched ? "watched" : "unwatched" }</button>
+        <button onClick={onDeleteClick} > Delete</button>
+        <button onClick={() => addToFavorites(movie)}> {movie.isFavorite ? "Unfavorite" : "⭐Favorite" }</button>
+      </div>
     </div>
   );
 }
