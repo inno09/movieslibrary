@@ -1,18 +1,16 @@
-// import React, { useState } from "react";
+import React from 'react';
 
-// function SearchBar() {
-//   const [isDarkMode, setIsDarkMode] = useState(false);
+const SearchBar = (props) => {
+    return(
+        <div className='col col-sm-4'>
+            <input 
+            className='form-control' 
+            onChange={(event) => props.setSearchValue(event.target.value)} 
+            value={props.value} 
+            placeholder='Type to search...'>
 
-//   function handleDarkModeClick() {
-//     setIsDarkMode((isDarkMode) => !isDarkMode);
-//   }
-  
-//   return (
-//     <div>
-//       <div className="Nav"><NavBar isDarkMode={isDarkMode} onDarkModeClick={handleDarkModeClick}/></div>
-//       <div className="Search"><SearchBar /></div>
-//     </div>
-//   );
-// }
-
-// export default SearchBar;
+            </input>
+        </div>
+    )
+ }
+export default SearchBar;
