@@ -7,25 +7,51 @@ import Discover from './components/Discover';
 import Favorites from './components/Favorites';
 import Popular from './components/Popular.js';
 import SearchBar from './components/SearchBar.js';
+import MovieContainer from './components/MovieContainer.js';
+
+const movieAPI = "http://localhost:3000/movies";
 
 function App() {
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const [searchValue, setSearchValue] = useState('')
-  const [movies, setMovies] = useState([])
+  const [movies, setMovies] = useState([]);
+  const [favoriteVisible, setFavoriteVisible] = useState(true);
+  const moviesToDisplay = movies.filter((movie) => favoriteVisible || movie.isFavorite);
+    // Update state by passing the array of items to setPoems
+    useEffect(() => {
+      fetch(movieAPI)
+        .then(response => response.json())
+        .then(data => setMovies(data))
+    }, []);
 
-  const getMovieRequest = async (resp) => {
-    const url = `https://imdb-api.com/en/API/SearchMovie/k_12345678/${searchValue}`
-    const response = await fetch(url)
-    const responseJSON = await response.json()
-
-    if (responseJSON.Search) {
-        setMovies(responseJSON.Search)
+    // Render the view for the poem container, 
+    // Add and remove poems from favorites 
+    function renderMovieView() {
+      if (moviesToDisplay.length === 0 && !favoriteVisible) {
+        return (<h1>You have no favorites added</h1>)
+      } else {
+        return (
+          <MovieContainer movies={moviesToDisplay} 
+          removeMovie={removeMovie} addToFavorites={addToFavorites}/>
+        )
+      }
     }
-  }
 
-  useEffect(() => {
-    getMovieRequest(searchValue);
-  }, [searchValue])
+
+
+    // add a poem to my favorites and see it on a separate list
+    function addToFavorites(favMovie) {
+      setMovies(movies.map(movie => {
+        return movie.id === favMovie.id ? {...favMovie, isFavorite: !favMovie.isFavorite} : movie
+        }  
+      ))
+    }
+
+    // delete a poem and they are still gone when I refresh the page
+    function removeMovie(movieToRemove) {
+      setMovies(movies.filter(movie => movie.id !== movieToRemove.id))
+    }
+    
+
 
   function handleDarkModeClick() {
     setIsDarkMode((isDarkMode) => !isDarkMode);
@@ -35,8 +61,12 @@ function App() {
     <div className="App">
       <NavBar isDarkMode={isDarkMode} onDarkModeClick={handleDarkModeClick}/>
       <div>
-        <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} />
+        {/* <SearchBar searchValue={searchValue} setSearchValue={setSearchValue} /> */}
       </div>
+      <div className="sidebar">
+        <button onClick={() => setFavoriteVisible(!favoriteVisible)} >Show/hide Favorite Movies</button>
+      </div>
+      {renderMovieView()}
       <Switch>
         <Route exact path="/Favorites">
           <Favorites />
