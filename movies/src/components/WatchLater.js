@@ -1,7 +1,7 @@
 import React from "react";
 
-function Popular() {
+function WatchLater() {
   return <h1>Popular!</h1>;
 }
 
-export default Popular;
+export default WatchLater;

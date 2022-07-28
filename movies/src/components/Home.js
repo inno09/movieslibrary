@@ -1,4 +1,6 @@
 import React, { useState,useEffect } from "react";
+import { useHistory } from "react-router-dom";
+
 import MovieContainer from './MovieContainer.js';
 
 const movieAPI = "http://localhost:3000/movies";
@@ -7,7 +9,13 @@ function Home() {
   const [movies, setMovies] = useState([]);
   const [favoriteVisible, setFavoriteVisible] = useState(true);
   const moviesToDisplay = movies.filter((movie) => favoriteVisible || movie.isFavorite);
-    useEffect(() => {
+  const history = useHistory();
+
+  const Favorites = () => {
+    history.push("/Favorites")
+}
+  
+  useEffect(() => {
       fetch(movieAPI)
         .then(response => response.json())
         .then(data => setMovies(data))
@@ -44,3 +52,4 @@ function Home() {
 }
 
 export default Home;
+

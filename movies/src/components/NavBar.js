@@ -20,7 +20,7 @@ const Navbar = ({onDarkModeClick, isDarkMode}) => {
               <NavLink className="nav-link" to="/discover">Discover</NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/popular">Popular</NavLink>
+              <NavLink className="nav-link" to="/watchlater">WatchLater</NavLink>
             </li>
           </ul>
         </div>

@@ -5,7 +5,7 @@ import NavBar from './components/NavBar';
 import Home from './components/Home';
 import Discover from './components/Discover';
 import Favorites from './components/Favorites';
-import Popular from './components/Popular.js';
+import WatchLater from './components/WatchLater.js';
 // import SearchBar from './components/SearchBar.js';
 // import MovieContainer from './components/MovieContainer.js';
 
@@ -67,8 +67,8 @@ function App() {
         <Route exact path="/discover">
           <Discover />
         </Route>
-        <Route exact path="/popular">
-          <Popular />
+        <Route exact path="/watchlater">
+          <WatchLater />
         </Route>
         <Route exact path="/">
           <Home />
