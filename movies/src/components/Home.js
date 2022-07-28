@@ -42,7 +42,9 @@ function Home() {
   
 
   
-  
+  function removeMovie(movieToRemove) {
+    setMovies(movies.filter(movie => movie.id !== movieToRemove.id))
+  }
     
 
 
