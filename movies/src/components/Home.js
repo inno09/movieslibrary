@@ -51,7 +51,7 @@ function Home() {
   return (
     <div>
        <div className="sidebar"> 
-        <button onClick={() => setFavoriteVisible(!favoriteVisible)} >Show/hide Favorite Movies</button>
+        {<button onClick={() => setFavoriteVisible(!favoriteVisible)} >Show/hide Favorite Movies</button>}
         {/* <button onClick={() => setWatchLater(!watchLaterVisible)} >Watch Later</button> */}
       </div> 
       {/* {renderMovieView()} */}

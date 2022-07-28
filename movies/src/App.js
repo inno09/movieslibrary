@@ -4,7 +4,6 @@ import './App.css';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 import Random from './components/Random';
-import Favorites from './components/Favorites';
 import Discover from './components/Discover';
 // import SearchBar from './components/SearchBar.js';
 // import MovieContainer from './components/MovieContainer.js';
@@ -61,9 +60,6 @@ function App() {
       </div> */}
       {/* {renderMovieView()} */}
       <Switch>
-        <Route exact path="/Favorites">
-          <Favorites />
-        </Route>
         <Route exact path="/discover">
           <Discover />
         </Route>
