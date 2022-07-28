@@ -8,6 +8,7 @@ function Home() {
 
   const [movies, setMovies] = useState([]);
   const [favoriteVisible, setFavoriteVisible] = useState(true);
+  // const [formVisible, setFormVisible] = useState(true);
   // const [watchLaterVisible, setWatchLater] = useState(true);
   const moviesToDisplay = movies.filter((movie) => favoriteVisible || movie.isFavorite);
   // const history = useHistory();
@@ -38,10 +39,6 @@ function Home() {
     ))
   }
 
-  function addMovie(newMovie) {
-    setMovies([...movies, newMovie]);
-  }
-
   
 
   
@@ -53,12 +50,7 @@ function Home() {
 
   return (
     <div>
-       <div className="sidebar">
-       <button 
-          onClick={() => setFormVisible(!formVisible)} >
-          Show/hide new Movie form
-        </button>
-        {formVisible ? <NewMovieForm addMovie={addMovie} /> : null} 
+       <div className="sidebar"> 
         <button onClick={() => setFavoriteVisible(!favoriteVisible)} >Show/hide Favorite Movies</button>
         {/* <button onClick={() => setWatchLater(!watchLaterVisible)} >Watch Later</button> */}
       </div> 
