@@ -1,7 +1,12 @@
 import React from "react";
+import SearchBar from "./SearchBar";
 
 function Discover() {
-  return <h1>Discover!</h1>;
+  return (
+    <div>
+      < SearchBar/>
+    </div>
+  );
 }
 
 export default Discover;

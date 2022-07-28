@@ -5,7 +5,6 @@ const movieAPI = "http://localhost:3000/movies";
 function Movies({movie, removeMovie, addToFavorites}) {
   const {fullTitle, releaseState, image} = movie;
   const [isWatched, setIsWatched] = useState(false)
-  // sends a request to delete the poem from the database
   function onDeleteClick(e) {
     e.preventDefault();
     fetch(`${movieAPI}/${movie.id}`, {

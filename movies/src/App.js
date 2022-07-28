@@ -37,12 +37,12 @@ function App() {
 
 
    
-  //   function addToFavorites(favMovie) {
-  //     setMovies(movies.map(movie => {
-  //       return movie.id === favMovie.id ? {...favMovie, isFavorite: !favMovie.isFavorite} : movie
-  //       }  
-  //     ))
-  //   }
+    // function addToFavorites(favMovie) {
+    //   setMovies(movies.map(movie => {
+    //     return movie.id === favMovie.id ? {...favMovie, isFavorite: !favMovie.isFavorite} : movie
+    //     }  
+    //   ))
+    // }
 
     
   //   function removeMovie(movieToRemove) {
