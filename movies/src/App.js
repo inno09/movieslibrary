@@ -23,8 +23,7 @@ function App() {
         .then(data => setMovies(data))
     }, []);
 
-    // Render the view for the poem container, 
-    // Add and remove poems from favorites 
+  
     function renderMovieView() {
       if (moviesToDisplay.length === 0 && !favoriteVisible) {
         return (<h1>You have no favorites added</h1>)
@@ -38,7 +37,7 @@ function App() {
 
 
 
-    // add a poem to my favorites and see it on a separate list
+   
     function addToFavorites(favMovie) {
       setMovies(movies.map(movie => {
         return movie.id === favMovie.id ? {...favMovie, isFavorite: !favMovie.isFavorite} : movie
@@ -46,7 +45,7 @@ function App() {
       ))
     }
 
-    // delete a poem and they are still gone when I refresh the page
+    
     function removeMovie(movieToRemove) {
       setMovies(movies.filter(movie => movie.id !== movieToRemove.id))
     }
