@@ -27,7 +27,7 @@ function Discover({addMovie}) {
   }
 
   return (
-    <form className="new-poem-form" onSubmit={handleSubmit} >
+    <form className="new-movie-form" onSubmit={handleSubmit} >
       <input 
         placeholder="Title(Year)" 
         value={fullTitle}

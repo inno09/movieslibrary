@@ -1,4 +1,5 @@
 import React, { useState,useEffect } from "react";
+
 // import { useHistory } from "react-router-dom";
 
 import MovieContainer from './MovieContainer.js';
@@ -51,8 +52,10 @@ function Home() {
   return (
     <div>
        <div className="sidebar"> 
-        {<button onClick={() => setFavoriteVisible(!favoriteVisible)} >Show/hide Favorite Movies</button>}
+       {/* <Link to="/favorites"> */}
+        {<button onClick={() => setFavoriteVisible(!favoriteVisible)} >Show Favorite Movies</button>}
         {/* <button onClick={() => setWatchLater(!watchLaterVisible)} >Watch Later</button> */}
+        {/* </Link> */}
       </div> 
       {/* {renderMovieView()} */}
       {renderMovieView()}
