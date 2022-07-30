@@ -1,31 +1,48 @@
-import React, { useState,useEffect } from "react";
-// import MovieContainer from "./MovieContainer";
 
-const movieAPI = "http://localhost:3000/movies";
+// import React, { useState,useEffect } from "react";
 
-function Random({movie}) {
-  const [movies, setMovies] = useState([]);
-//   const {fullTitle, image} = movie;
+// const movieAPI = "http://localhost:3000/movies";
+
+// function Random() {
+//   const [movies, setMovies] = useState([]);
+//   useEffect(() => {
+//     fetch(movieAPI)
+//       .then(response => response.json())
+//       .then(data => setMovies(data))
+//   }, []);
+
+
+
+
+//   let getRandomMovie = movies[Math.floor(Math.random() * movies.length)];
+//     for (const movie of getRandomMovie) {
+//       console.log(movie)
+//     }
+//   // console.log(getRandomMovie)
+//   //  const movie = getRandomMovie
+//   //  console.log(movie)
+//   //  const [fullTitle, releaseState, image] = movie;
+
+   
+   
+//   // console.log(fullTitle)
+   
+   
+   
+   
+
   
-//   // const [fullTitle, setFullTitle] = useState("");
-//   // const [image, setImage] = useState("");
-  useEffect(() => {
-    fetch(movieAPI)
-      .then(response => response.json())
-      .then(data => setMovies(data))
-  }, []);
-
-  const getRandomMovie = movies[Math.floor(Math.random() * movies.length)];
-  console.log(getRandomMovie);
-
   
-    return (
-      <div className="App">
-        <button onClick={getRandomMovie}>Random</button>
-        {movie}
-      </div>
-    );
-  }
+//   // const {fullTitle, releaseState, image} = getRandomMovie;
+  
 
+//   return (
+//     <div> 
+//       {/* <h3>{fullTitle}</h3>
+//         <img src={image} className="card-img-top" style={{height: '100%'}} alt={fullTitle} /> */}
+//     </div>
+//   );
+// }
 
-export default Random;
+// export default Random; 
+
