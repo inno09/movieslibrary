@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# Welcome to Fmovies Lib! 
+## Your one home of entertainment.
+#### This is a web application designed using HTML, CSS, JS, Bootstrap, allowing users to bookmark their favorite movies and tv shows for later reference.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Link to Deployed Site
 
-## Available Scripts
+[Fmovie Lib](https://fmovies-lib.herokuapp.com)
 
-In the project directory, you can run:
+## Table of Contents
+  * [Motivation and Technologies](#motivation)
+  * [Functionality](#functionality)
+  * [Usage](#usage)
 
-### `npm start`
+## Motivation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The aim of this project was to deliver an app that:
+ 
+*Has at least 5 components
+*Has at least 3 client-side routes using react-router
+*Uses a json-server to create a RESTful API for your backend and make both a GET and a POST request to the json server.
+*Is deployed to Heroku
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+#### Technologies
+* HTML
+* CSS 
+* JavaScript
+* Bootstrap
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Functionality
 
-### `npm run build`
+![landing-demo](./public/L1.PNG)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Library-Home](./public/L2.PNG)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Discover](./public/L3.PNG)
+#### The demo shows the main functions of Fmovies Lib:
+* The landing page itroduces the user to the app and gives the app some character while also hosting links to other parts of the app.
+* When the user selects the home button they will be directed to their collection of stored movies where they will also have the option to favorite a movie or delete it from     the database entirely.. 
+* On the discover route the user is presented with a for to add new content to his library by adding both a title release year and an image of the movie which is updated to the database.  
+* The new movie is now updated at the bottom of the database which also helps the user in sorting the movies from old to new especially when clearing up the library. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Usage
+* View the movies stored in your library as a refrence point. 
+* Favorite movies in your library to help sort out your viewing list.
+* Delete movies from your library to remove movies you already watched or dont intend to watch.
+* Add new content to your viewing list.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Future Development
+* Add a searchbar that connects to an external API the enables you to add to the library making the discover page more user friendly.
+* Add a randomizer to help select between may of the great options the user already has in store.
+* Add a categories page to help sort out the movies and make the decision making process easier.
