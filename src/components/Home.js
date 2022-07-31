@@ -4,7 +4,7 @@ import React, { useState,useEffect } from "react";
 
 import MovieContainer from './MovieContainer.js';
 
-const movieAPI = "http://localhost:3000/movies";
+const movieAPI = "https://hidden-earth-55593.herokuapp.com/";
 function Home() {
 
   const [movies, setMovies] = useState([]);

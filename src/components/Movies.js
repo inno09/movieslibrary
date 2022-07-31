@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const movieAPI = "http://localhost:3000/movies";
+const movieAPI = "https://hidden-earth-55593.herokuapp.com/";
 
 function Movies({movie, removeMovie, addToFavorites}) {
   const {fullTitle, releaseState, image} = movie;
