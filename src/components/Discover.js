@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const movieAPI = "http://localhost:3000/movies";
+const movieAPI = "https://hidden-earth-55593.herokuapp.com/";
 
 function Discover({addMovie}) {
   const [fullTitle, setFullTitle] = useState("");
